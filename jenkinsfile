@@ -1,17 +1,25 @@
 stages {
-  stage("lint") {
+  stage("clone") {
     steps {
-    
+      git branch : "master"
+      url: "place holder for the repo you want to apply the workflow on. ps: you should add you creds to the master agent."
     }
   }
   stage("lint") {
     steps {
-    
+      sh: ```
+      npm run lint
+      ```
     }
   }
-  stage("lint") {
+  stage ("build") {
     steps {
-    
+
     }
   }
+  // stage("test") { // skip test for the moment until i provide test for what i write
+  //   steps {
+    
+  //   }
+  // }
 }
