@@ -5,21 +5,30 @@ stages {
       url: "place holder for the repo you want to apply the workflow on. ps: you should add you creds to the master agent."
     }
   }
-  stage("lint") {
+  stage("lint") { // nodejs specific
     steps {
       sh: ```
       npm run lint
       ```
     }
   }
-  stage ("build") {
+  stage ("build") { // nodejs specific
     steps {
-
+      sh: ""
     }
   }
   // stage("test") { // skip test for the moment until i provide test for what i write
-  //   steps {
-    
-  //   }
+    // steps {
+    // }
   // }
+  stage("package") { // build the image in your local registry
+    steps {
+      sh: ""
+    }
+  }
+  stage("deploy") { // deploy to your artifact registry
+    steps {
+      sh : ""
+    }
+  }
 }
