@@ -1,0 +1,17 @@
+stages {
+  stage("lint") {
+    steps {
+    
+    }
+  }
+  stage("lint") {
+    steps {
+    
+    }
+  }
+  stage("lint") {
+    steps {
+    
+    }
+  }
+}
